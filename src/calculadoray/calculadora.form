@@ -51,7 +51,7 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jButton10" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jButton9" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -68,8 +68,13 @@
                                   <Component id="jButton19" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jButton21" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jButton21" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="Btn_Raiz_" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -133,6 +138,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton12" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jButton21" alignment="3" pref="32" max="32767" attributes="0"/>
+                  <Component id="Btn_Raiz_" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -141,6 +147,9 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="TxtPant">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="4"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
@@ -308,6 +317,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton21ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Btn_Raiz_">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RAIZ"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Btn_Raiz_ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

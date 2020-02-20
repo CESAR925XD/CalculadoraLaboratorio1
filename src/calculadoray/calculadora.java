@@ -40,8 +40,11 @@ public class calculadora extends javax.swing.JFrame {
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
+        Btn_Raiz_ = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        TxtPant.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jButton1.setText("Sin");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -190,6 +193,13 @@ public class calculadora extends javax.swing.JFrame {
             }
         });
 
+        Btn_Raiz_.setText("RAIZ");
+        Btn_Raiz_.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_Raiz_ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -232,7 +242,11 @@ public class calculadora extends javax.swing.JFrame {
                                         .addGap(2, 2, 2)
                                         .addComponent(jButton17))
                                     .addComponent(jButton19)))
-                            .addComponent(jButton21))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton21)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(Btn_Raiz_)))
+                        .addGap(18, 18, 18)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -282,7 +296,8 @@ public class calculadora extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton12)
-                    .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
+                    .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addComponent(Btn_Raiz_, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -425,12 +440,15 @@ if(!TxtPant.getText().equals(""))
             Resultado=Double.parseDouble(Num1)*0.19;
             break; 
         case"^": 
-            Resultado=1.0; 
-            for (int i=1;i<=Double.parseDouble(Num1); i++ )
-            {
-                Resultado=Resultado*Double.parseDouble(Num2);
-            }
+         
+            
+            Resultado=Math.pow(Double.parseDouble(Num1), Double.parseDouble(Num2));
+            
             break; 
+        case "raiz":
+            double g=1/Double.parseDouble(Num1);
+             Resultado= Math.pow(Double.parseDouble(Num2),g);
+             break;
             
         
     }
@@ -479,8 +497,19 @@ if(!TxtPant.getText().equals(""))
     Num1=TxtPant.getText(); 
     Signo="^"; 
     TxtPant.setText(" ^ ");
+    TxtPant.setText("");
 }    
     }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void Btn_Raiz_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_Raiz_ActionPerformed
+       if(!TxtPant.getText().equals("")) 
+{
+    Num1=TxtPant.getText(); 
+    Signo="raiz"; 
+    TxtPant.setText(" ^ ");
+    TxtPant.setText("");
+}    
+    }//GEN-LAST:event_Btn_Raiz_ActionPerformed
 
 
     public static void main(String args[]) {
@@ -516,6 +545,7 @@ if(!TxtPant.getText().equals(""))
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Btn_Raiz_;
     private javax.swing.JTextField TxtPant;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;

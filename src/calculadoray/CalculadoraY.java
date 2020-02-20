@@ -15,7 +15,11 @@ public class CalculadoraY {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        calculadora obj = new calculadora();
+        obj.setTitle("CALCULADORA");
+        obj.setVisible(true);
+        obj.setLocationRelativeTo(null);
     }
     
 }
